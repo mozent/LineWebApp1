@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: linewebapi
+    env: dotnet
+    plan: free
+    buildCommand: dotnet build
+    startCommand: dotnet LineWebApp1.dll
+    envVars:
+      - key: ConnectionStrings__DefaultConnection
+        value: Host=dpq-d05j0i14d50c73f2ncmg-a;Port=5432;Database=yuli;Username=yuli;Password=KRe93GL05L2zSX3RoOvltdKIRw10Mh6M
